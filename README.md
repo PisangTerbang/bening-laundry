@@ -2,7 +2,7 @@
 
 A landing page for **Bening Laundry**, a pay-per-kilo laundry (*laundry kiloan*) with pickup and delivery in Condongcatur, Sleman, Yogyakarta. Visitors estimate the cost of their laundry, request a pickup through WhatsApp, track their order with a code, and check whether their area is covered.
 
-**Live site:** https://bening-laundry.vercel.app
+**Live site:** https://bening-laundry-ochre.vercel.app
 
 | Desktop | Mobile |
 | --- | --- |
