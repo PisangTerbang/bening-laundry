@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-air: #e9f1fb;
+  --color-ink: #0f1c3f;
+  --color-muted: #4e5c7b;
+  --color-line: #cddbef;
+  --color-cobalt: #1543c8;
+  --color-cobalt-deep: #0d2c8a;
+  --color-nota: #ffe89c;
+  --color-nota-ink: #1b3a9a;
+  --color-pink: #e8507f;
+  --color-wa: #128c4b;
+
+  --font-sans: "Nunito Variable", ui-rounded, ui-sans-serif, system-ui, sans-serif;
+  --font-hand: "Caveat Variable", "Segoe Print", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+body {
+  background: var(--color-air);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+}
+
+.heading {
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.02;
+}
+
+.wave {
+  animation: wave 4s linear infinite;
+}
+@keyframes wave {
+  to {
+    transform: translateX(-120px);
+  }
+}
+.bubble {
+  animation: bubble 5s ease-in infinite;
+  transform-box: fill-box;
+}
+@keyframes bubble {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scale(0.6);
+  }
+  20% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-120px) scale(1.1);
+  }
+}
+
+.nota {
+  background: var(--color-nota);
+  --zig: 10px;
+  mask:
+    conic-gradient(from 135deg at top, #0000, #000 1deg 89deg, #0000 90deg) top / calc(var(--zig) * 2) var(--zig) repeat-x,
+    linear-gradient(#000 0 0) 0 var(--zig) / 100% 100% no-repeat;
+}
+.nota-lines {
+  background-image: linear-gradient(transparent calc(2.4rem - 1px), rgb(27 58 154 / 0.14) calc(2.4rem - 1px));
+  background-size: 100% 2.4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .wave,
+  .bubble {
+    animation: none;
+  }
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-pink);
+  outline-offset: 3px;
+  border-radius: 8px;
+}
